@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+li {
+  padding: 5px;
+}
+.poll_container {
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 4px;
+  background-color: #dddddd;
+  width: 40%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
+input {
+  margin: 10px;
+}

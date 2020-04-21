@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+  </head>
+  <body>
+    <h1>Welcome to the Random Polling Website</h1>
+    <h2>Featured Polls</h2>
+    {% if latest_question_list %}
+        {% for question in latest_question_list %}
+            <div class="poll_container">
+              <a href="{% url 'polls:detail' question.id %}">
+                <h2>{{ question.question_text }}</h2>
+                <p>Published {{question.pub_date}}</p>
+              </a>
+            </div>
+        {% endfor %}
+    {% else %}
+      <p>No polls are available.</p>
+    {% endif %}
+  </div>
+  </body>
+</html>
